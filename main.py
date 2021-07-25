@@ -14,6 +14,7 @@ if __name__ == '__main__':
 
     # hyperparameters for network
     dropout = 0.1
+
     # hyperparameters for training
     training_hyperparameters = {
         'epochs': 5,

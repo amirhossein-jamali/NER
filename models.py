@@ -140,7 +140,7 @@ class NER:
         Trains the network from the NER model specification.
 
         Returns:
-            str: a message saying if the model was trained succesfully.
+            str: a message saying if the model was trained successfully.
             The network in the 'network' attribute is trained as a
             side-effect. Training losses and validation loss are saved
             in 'training_losses' and 'valid_loss'
@@ -177,7 +177,7 @@ class NER:
 
         Returns:
             str: message telling if weights for network were
-            loaded succesfully.
+            loaded successfully.
         """
         assert os.path.exists(model_path), "File does not exist. You can download network with download_network()"
         self.network.load_state_dict(torch.load(model_path, map_location=torch.device(self.device)))
@@ -241,7 +241,7 @@ class NER:
                        tag_outside=self.tag_outside,
                        **kwargs)
 
-    def predict_text(self, text: str, **kwargs) -> list:
+    def predict_text(self, text: str, **kwargs) -> tuple:
         """Predict Named Entities in a Text
 
         Args:

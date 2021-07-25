@@ -1,4 +1,3 @@
-"""This section covers `torch` networks for `NER`"""
 import torch
 import torch.nn as nn
 from transformers import AutoConfig
@@ -76,4 +75,3 @@ class NERNetwork(nn.Module):
         outputs = self.tags(outputs)
 
         return outputs
-

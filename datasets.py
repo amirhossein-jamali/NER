@@ -1,5 +1,3 @@
-
-
 def get_data(file_path):
     """Read sentences and tags from a data file.
 
@@ -7,9 +5,9 @@ def get_data(file_path):
       file_path (str): path to NER data file.
 
     Returns:
-      examples (dict): a dictionary with two keys: words (list of lists)
-        holding words in each sequence, and labels (list of lists) holding
-        corresponding labels.
+      examples (dict): a dictionary with two keys: sentences (list of lists)
+        holding words in each sequence, and tags (list of lists) holding
+        corresponding tags.
     """
     with open(file_path, encoding="utf-8") as f:
         examples = {"sentences": [], "tags": []}
